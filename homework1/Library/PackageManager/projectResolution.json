@@ -119,6 +119,26 @@
       "source": "registry",
       "testable": false
     },
+    "com.unity.xr.interaction.toolkit@3.0.10": {
+      "name": "com.unity.xr.interaction.toolkit",
+      "displayName": "XR Interaction Toolkit",
+      "resolvedPath": "C:\\Users\\ursul\\Documents\\XRintro\\Introduction-to-XR\\homework1\\Library\\PackageCache\\com.unity.xr.interaction.toolkit@a4485915657e",
+      "fingerprint": "a4485915657e1651fa8a8685e7e85c83568aef61",
+      "editorCompatibility": "2021.3.0a1",
+      "version": "3.0.10",
+      "source": "registry",
+      "testable": false
+    },
+    "com.unity.xr.openxr@1.16.1": {
+      "name": "com.unity.xr.openxr",
+      "displayName": "OpenXR Plugin",
+      "resolvedPath": "C:\\Users\\ursul\\Documents\\XRintro\\Introduction-to-XR\\homework1\\Library\\PackageCache\\com.unity.xr.openxr@ef0033a586bf",
+      "fingerprint": "ef0033a586bf33cb236bfe77cb661fe1b2882748",
+      "editorCompatibility": "2022.3.0a1",
+      "version": "1.16.1",
+      "source": "registry",
+      "testable": false
+    },
     "com.unity.modules.accessibility@1.0.0": {
       "name": "com.unity.modules.accessibility",
       "displayName": "Accessibility",
@@ -391,6 +411,46 @@
       "source": "builtin",
       "testable": false
     },
+    "com.unity.xr.core-utils@2.5.3": {
+      "name": "com.unity.xr.core-utils",
+      "displayName": "XR Core Utilities",
+      "resolvedPath": "C:\\Users\\ursul\\Documents\\XRintro\\Introduction-to-XR\\homework1\\Library\\PackageCache\\com.unity.xr.core-utils@f0450cbac8d6",
+      "fingerprint": "f0450cbac8d66beb614cb1b4241eae977ee9990e",
+      "editorCompatibility": "2021.3.0f1",
+      "version": "2.5.3",
+      "source": "registry",
+      "testable": false
+    },
+    "com.unity.xr.management@4.5.3": {
+      "name": "com.unity.xr.management",
+      "displayName": "XR Plugin Management",
+      "resolvedPath": "C:\\Users\\ursul\\Documents\\XRintro\\Introduction-to-XR\\homework1\\Library\\PackageCache\\com.unity.xr.management@574ebfb1e976",
+      "fingerprint": "574ebfb1e9766bb5f6bdb255c6abfb195b43f4cb",
+      "editorCompatibility": "2022.3.0a1",
+      "version": "4.5.3",
+      "source": "registry",
+      "testable": false
+    },
+    "com.unity.xr.legacyinputhelpers@2.1.12": {
+      "name": "com.unity.xr.legacyinputhelpers",
+      "displayName": "XR Legacy Input Helpers",
+      "resolvedPath": "C:\\Users\\ursul\\Documents\\XRintro\\Introduction-to-XR\\homework1\\Library\\PackageCache\\com.unity.xr.legacyinputhelpers@b7579e86f3b4",
+      "fingerprint": "b7579e86f3b456c909fda6b875fba7ab1eeb1322",
+      "editorCompatibility": "2019.4.0a1",
+      "version": "2.1.12",
+      "source": "registry",
+      "testable": false
+    },
+    "com.unity.mathematics@1.3.2": {
+      "name": "com.unity.mathematics",
+      "displayName": "Mathematics",
+      "resolvedPath": "C:\\Users\\ursul\\Documents\\XRintro\\Introduction-to-XR\\homework1\\Library\\PackageCache\\com.unity.mathematics@8017b507cc74",
+      "fingerprint": "8017b507cc74bf0a1dd14b18aa860569f807314d",
+      "editorCompatibility": "2021.3.0a1",
+      "version": "1.3.2",
+      "source": "registry",
+      "testable": false
+    },
     "com.unity.ext.nunit@2.0.5": {
       "name": "com.unity.ext.nunit",
       "displayName": "Custom NUnit",
@@ -448,16 +508,6 @@
       "fingerprint": "973857688024e0c6019b60f7a3b403e8e467c4d0",
       "editorCompatibility": "2022.3.0a1",
       "version": "1.8.27",
-      "source": "registry",
-      "testable": false
-    },
-    "com.unity.mathematics@1.3.2": {
-      "name": "com.unity.mathematics",
-      "displayName": "Mathematics",
-      "resolvedPath": "C:\\Users\\ursul\\Documents\\XRintro\\Introduction-to-XR\\homework1\\Library\\PackageCache\\com.unity.mathematics@8017b507cc74",
-      "fingerprint": "8017b507cc74bf0a1dd14b18aa860569f807314d",
-      "editorCompatibility": "2021.3.0a1",
-      "version": "1.3.2",
       "source": "registry",
       "testable": false
     },
