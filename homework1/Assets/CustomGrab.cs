@@ -66,6 +66,7 @@ public class CustomGrab : MonoBehaviour
         if (!rb) return;
         //rb.velocity = Vector3.zero;
         //rb.angularVelocity = Vector3.zero;
+        Debug.Log("rb found");
         rb.isKinematic = true;
         rb.useGravity = false;
     }
