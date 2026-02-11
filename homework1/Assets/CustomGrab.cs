@@ -18,6 +18,7 @@ public class CustomGrab : MonoBehaviour
 
     private void Start()
     {
+        Debug.Log("Started");
         action.action.Enable();
         lastPosition = transform.position;
         lastRotation = transform.rotation;
@@ -38,7 +39,7 @@ public class CustomGrab : MonoBehaviour
             if (!grabbedObject)
                 grabbedObject = nearObjects.Count > 0 ? nearObjects[0] : otherHand.grabbedObject;
 
-                if(grabbedObject){
+                if(grabbedObject){  //läheltä löytyi grabbable object
                     OnGrab(grabbedObject);
                 }
 
@@ -51,9 +52,11 @@ public class CustomGrab : MonoBehaviour
             }
         }
         // If let go of button, release object
-        else if (grabbedObject)
+        else if (grabbedObject) // eli not grabbing && grabbedObject true
+        {
             OnRelease(grabbedObject);
             grabbedObject = null;
+        }
 
         // Should save the current position and rotation here
         lastPosition = transform.position;
@@ -62,6 +65,7 @@ public class CustomGrab : MonoBehaviour
 
     void OnGrab(Transform obj)
     {
+        Debug.Log("onGrab");
         Rigidbody rb = obj.GetComponent<Rigidbody>();
         if (!rb) return;
         //rb.velocity = Vector3.zero;
@@ -69,6 +73,7 @@ public class CustomGrab : MonoBehaviour
         Debug.Log("rb found");
         rb.isKinematic = true;
         rb.useGravity = false;
+        Debug.Log("isKinematic: " + rb.isKinematic + " | usesGravity: " + rb.useGravity);
     }
 
     void OnRelease(Transform obj)
@@ -77,6 +82,7 @@ public class CustomGrab : MonoBehaviour
         if (!rb) return;
         rb.isKinematic = false;
         rb.useGravity = true;
+        Debug.Log("Released: isKinematic: " + rb.isKinematic + " | usesGravity: " + rb.useGravity);
     }
 
 
