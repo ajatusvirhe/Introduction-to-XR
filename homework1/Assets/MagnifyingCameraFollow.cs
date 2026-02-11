@@ -13,13 +13,13 @@ public class MagnifyingCameraFollow : MonoBehaviour
         transform.position = lensCenter.position;
 
         // Get head forward direction
-        Vector3 forward = headCamera.forward;
+        //Vector3 forward = headCamera.forward;
 
         // Look straight where the player looks
-        //transform.rotation = headCamera.rotation;
+        transform.rotation = headCamera.rotation;
         // Keep camera upright (no roll)
-        transform.position += forward * 0.01f;
-        transform.rotation = Quaternion.LookRotation(forward, Vector3.up);
+        //transform.position += forward * 0.01f;
+        //transform.rotation = Quaternion.LookRotation(forward, Vector3.up);
         
     }
 }
