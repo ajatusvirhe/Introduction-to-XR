@@ -18,7 +18,6 @@ public class CustomGrab : MonoBehaviour
 
     private void Start()
     {
-        Debug.Log("Started");
         action.action.Enable();
         lastPosition = transform.position;
         lastRotation = transform.rotation;
@@ -37,24 +36,39 @@ public class CustomGrab : MonoBehaviour
         {
             // Grab nearby object or the object in the other hand
             if (!grabbedObject)
+            { // HOX uusi
                 grabbedObject = nearObjects.Count > 0 ? nearObjects[0] : otherHand.grabbedObject;
 
-                if(grabbedObject){  //läheltä löytyi grabbable object
+                if (grabbedObject)
+                {  //läheltä löytyi grabbable object
                     OnGrab(grabbedObject);
                 }
+            } // HOX uusi
 
             if (grabbedObject)
             {
+                // Compute deltas
+                Vector3 deltaPos = transform.position - lastPosition;
+                Quaternion deltaRot = transform.rotation * Quaternion.Inverse(lastRotation);
+                // these just made it worse
+                //Rotate around controller origin
+                //Vector3 objectToHand = grabbedObject.position - transform.position;  // vector btwn object and hand positions
+                //objectToHand = deltaRot * objectToHand;
+                //grabbedObject.position +=  objectToHand; //transform.position + objecttohand
                 // Change these to add the delta position and rotation instead
                 // Save the position and rotation at the end of Update function, so you can compare previous pos/rot to current here
-                grabbedObject.position += (transform.position - lastPosition);
-                grabbedObject.rotation = (transform.rotation * Quaternion.Inverse(lastRotation)) * grabbedObject.rotation;
+                grabbedObject.position += deltaPos;
+                grabbedObject.rotation = deltaRot * grabbedObject.rotation;
             }
         }
         // If let go of button, release object
         else if (grabbedObject) // eli not grabbing && grabbedObject true
         {
-            OnRelease(grabbedObject);
+            if (!otherHand.grabbing)
+            {
+                OnRelease(grabbedObject);
+                
+            }
             grabbedObject = null;
         }
 
@@ -65,15 +79,13 @@ public class CustomGrab : MonoBehaviour
 
     void OnGrab(Transform obj)
     {
-        Debug.Log("onGrab");
         Rigidbody rb = obj.GetComponent<Rigidbody>();
         if (!rb) return;
         //rb.velocity = Vector3.zero;
         //rb.angularVelocity = Vector3.zero;
-        Debug.Log("rb found");
         rb.isKinematic = true;
         rb.useGravity = false;
-        Debug.Log("isKinematic: " + rb.isKinematic + " | usesGravity: " + rb.useGravity);
+        //Debug.Log("isKinematic: " + rb.isKinematic + " | usesGravity: " + rb.useGravity);
     }
 
     void OnRelease(Transform obj)
@@ -82,7 +94,7 @@ public class CustomGrab : MonoBehaviour
         if (!rb) return;
         rb.isKinematic = false;
         rb.useGravity = true;
-        Debug.Log("Released: isKinematic: " + rb.isKinematic + " | usesGravity: " + rb.useGravity);
+        //Debug.Log("Released: isKinematic: " + rb.isKinematic + " | usesGravity: " + rb.useGravity);
     }
 
 
