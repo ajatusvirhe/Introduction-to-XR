@@ -183,6 +183,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 91c6a73e0c837e3418cc65b18d4143c1, type: 3}
       insertIndex: -1
       addedObject: {fileID: 334066259}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 91c6a73e0c837e3418cc65b18d4143c1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 334066260}
   m_SourcePrefab: {fileID: 100100000, guid: 91c6a73e0c837e3418cc65b18d4143c1, type: 3}
 --- !u!4 &334066258 stripped
 Transform:
@@ -211,6 +214,19 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &334066260
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 112923999}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d966ab779866e8945b49e990ccdffaa0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 10
 --- !u!1 &452431449
 GameObject:
   m_ObjectHideFlags: 0
@@ -634,6 +650,64 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8429981633443581382, guid: 6c8af5c8012f01440af6cb2bc3eb987c, type: 3}
   m_PrefabInstance: {fileID: 503734366}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &814664992 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 202364687, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
+  m_PrefabInstance: {fileID: 1261173101}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &814664998
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 814664992}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9605a24274a9ea04e8407a3727880e0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gripAction:
+    m_UseReference: 0
+    m_Action:
+      m_Name: Grip
+      m_Type: 1
+      m_ExpectedControlType: Button
+      m_Id: 5901e528-cda2-4e9f-932a-775d9d31bf29
+      m_Processors: 
+      m_Interactions: Hold
+      m_SingletonActionBindings:
+      - m_Name: 
+        m_Id: e555071f-d2d7-42ce-8748-740c7178397a
+        m_Path: <XRController>{LeftHand}/{GripButton}
+        m_Interactions: Hold
+        m_Processors: 
+        m_Groups: 
+        m_Action: Grip
+        m_Flags: 0
+      m_Flags: 0
+    m_Reference: {fileID: 0}
+  triggerAction:
+    m_UseReference: 0
+    m_Action:
+      m_Name: Trigger
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: 731914ba-8e56-4d02-8f88-5c103bdccfae
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings:
+      - m_Name: 
+        m_Id: a50c0d44-6a8c-42e9-b8f3-2573dca3443c
+        m_Path: <XRController>{LeftHand}/{TriggerButton}
+        m_Interactions: Hold
+        m_Processors: 
+        m_Groups: 
+        m_Action: Trigger
+        m_Flags: 0
+      m_Flags: 0
+    m_Reference: {fileID: 0}
+  hand: {fileID: 334066260}
 --- !u!1 &848795872 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 8bf23d74baedfba499737ae312d3fd4d, type: 3}
@@ -702,6 +776,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 8bf23d74baedfba499737ae312d3fd4d, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1131918655}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 8bf23d74baedfba499737ae312d3fd4d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1131918656}
   m_SourcePrefab: {fileID: 100100000, guid: 8bf23d74baedfba499737ae312d3fd4d, type: 3}
 --- !u!4 &1131918654 stripped
 Transform:
@@ -730,6 +807,19 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1131918656
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 848795872}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d966ab779866e8945b49e990ccdffaa0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 10
 --- !u!1001 &1261173101
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -840,7 +930,13 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 6528530117482412838, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1131918654}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 202364687, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 814664998}
+    - targetCorrespondingSourceObject: {fileID: 1670256624, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1263643684}
   m_SourcePrefab: {fileID: 100100000, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
 --- !u!4 &1261173102 stripped
 Transform:
@@ -945,6 +1041,64 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9f365cf844c03449bc8973eead2c3c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1263643678 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1670256624, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
+  m_PrefabInstance: {fileID: 1261173101}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1263643684
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1263643678}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9605a24274a9ea04e8407a3727880e0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gripAction:
+    m_UseReference: 0
+    m_Action:
+      m_Name: Grip
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: 6f0df6e1-6693-4de2-a951-de7a11091895
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings:
+      - m_Name: 
+        m_Id: 35599114-db0e-4f52-91f8-faf2cddca182
+        m_Path: <XRController>{RightHand}/{GripButton}
+        m_Interactions: Hold
+        m_Processors: 
+        m_Groups: 
+        m_Action: Grip
+        m_Flags: 0
+      m_Flags: 0
+    m_Reference: {fileID: 0}
+  triggerAction:
+    m_UseReference: 0
+    m_Action:
+      m_Name: Trigger
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: 53d46e68-3793-47a2-949b-b4179d7b6401
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings:
+      - m_Name: 
+        m_Id: 67393eae-d794-4b36-8e39-0ca2d387fb49
+        m_Path: <XRController>{RightHand}/{TriggerButton}
+        m_Interactions: Hold
+        m_Processors: 
+        m_Groups: 
+        m_Action: Trigger
+        m_Flags: 0
+      m_Flags: 0
+    m_Reference: {fileID: 0}
+  hand: {fileID: 1131918656}
 --- !u!1 &1771653862
 GameObject:
   m_ObjectHideFlags: 0
