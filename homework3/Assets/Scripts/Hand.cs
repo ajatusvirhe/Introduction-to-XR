@@ -13,7 +13,7 @@ public class Hand : MonoBehaviour
 
     //for physics
     public GameObject followobject;
-    private float followspeed = 30f;
+    private float followspeed = 40f;
     private float rotatespeed = 100f;
     private Vector3 posoffset;
     private Vector3 rotoffset;

@@ -29,6 +29,7 @@ public class StringManualPull : MonoBehaviour
     void OnGrab(SelectEnterEventArgs args)
     {
         grabbingHand = args.interactorObject.transform;
+        Debug.Log("Grabbinghand: " + grabbingHand.name);
         handStartY = grabbingHand.position.y;
     }
 
