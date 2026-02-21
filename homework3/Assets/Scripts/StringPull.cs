@@ -24,7 +24,7 @@ public class StringPull : MonoBehaviour
         if (pulledDistance > pullThreshold)
         {
             hasBeenPulled = true;
-            boothManager.StringSelected(this);
+            //boothManager.StringSelected(this);
             transform.localPosition = startLocalPosition; // move back 
         }
     }

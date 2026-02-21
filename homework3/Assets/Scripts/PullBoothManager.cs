@@ -3,13 +3,14 @@ using UnityEngine;
 public class PullBoothManager : MonoBehaviour
 {
     public GameObject[] prizes;   // Assign prizes in inspector
-    public StringPull[] strings;  // Assign strings in inspector
+    //public StringPull[] strings;  // Assign strings in inspector
+    public StringManualPull[] strings;  // Assign strings in inspector
     public Transform teleportPrize;
 
     private bool boothFinished = false;
 
-    public void StringSelected(StringPull selectedString)
-    //public void StringSelected(StringManualPull selectedString)
+    //public void StringSelected(StringPull selectedString)
+    public void StringSelected(StringManualPull selectedString)
     {
         if (boothFinished) return;
 
@@ -44,7 +45,8 @@ public class PullBoothManager : MonoBehaviour
 
     void DisableOtherStrings()
     {
-        foreach (StringPull s in strings)
+        //foreach (StringPull s in strings)
+        foreach (StringManualPull s in strings)
         {
             s.enabled = false;
         }
