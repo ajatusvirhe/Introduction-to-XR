@@ -3334,6 +3334,34 @@
                     "isPartOfComposite": true
                 }
             ]
+        },
+        {
+            "name": "own action map",
+            "id": "e9acba9b-e256-4a60-9393-d5b7c45f7a1e",
+            "actions": [
+                {
+                    "name": "rightPrimaryButton",
+                    "type": "Button",
+                    "id": "fae74c6b-7bb2-44f7-9d80-0c2b61876bb2",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "ffd6106d-a906-485a-bcfb-34cfde33a32f",
+                    "path": "<XRController>{RightHand}/{PrimaryButton}",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "rightPrimaryButton",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
         }
     ],
     "controlSchemes": []

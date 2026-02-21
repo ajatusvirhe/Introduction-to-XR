@@ -16,12 +16,11 @@ public class CanFallDetector : MonoBehaviour
         if (!hasFallen)
         {
             float distance = Vector3.Distance(transform.position, startPosition);
-            Debug.Log(gameObject.name + " distance : " + distance);
 
             if (distance > fallDistanceThreshold)
             {
                 hasFallen = true;
-                Debug.Log(gameObject.name + " hasFallen");
+                UnityEngine.Debug.Log(gameObject.name + " hasFallen");
             }
         }
     }
