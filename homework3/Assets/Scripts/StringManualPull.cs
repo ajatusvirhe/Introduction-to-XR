@@ -55,7 +55,7 @@ public class StringManualPull : MonoBehaviour
         if (clampedPull >= pullThreshold)
         {
             hasBeenPulled = true;
-            boothManager.StringSelected(this);
+            //boothManager.StringSelected(this);
         }
     }
 }

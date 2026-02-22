@@ -20,7 +20,6 @@ public class CanFallDetector : MonoBehaviour
             if (distance > fallDistanceThreshold)
             {
                 hasFallen = true;
-                UnityEngine.Debug.Log(gameObject.name + " hasFallen");
             }
         }
     }

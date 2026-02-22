@@ -48,7 +48,7 @@ public class BallBoothManager : MonoBehaviour
 
     void EndGame()
     {
-        Debug.Log("Booth Finished!");
+        
         // Tell GameManager this booth is complete
     }
 }

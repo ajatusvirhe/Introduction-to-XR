@@ -4,15 +4,22 @@ public class PullBoothManager : MonoBehaviour
 {
     public GameObject[] prizes;   // Assign prizes in inspector
     //public StringPull[] strings;  // Assign strings in inspector
-    public StringManualPull[] strings;  // Assign strings in inspector
+    //public StringManualPull[] strings;  // Assign strings in inspector
+    public StringManualGrab[] strings;  // Assign strings in inspector
     public Transform teleportPrize;
 
     private bool boothFinished = false;
 
     //public void StringSelected(StringPull selectedString)
-    public void StringSelected(StringManualPull selectedString)
+    //public void StringSelected(StringManualPull selectedString)
+    public void StringSelected(StringManualGrab selectedString)
     {
-        if (boothFinished) return;
+        Debug.Log("In stringslected");
+        if (boothFinished)
+        {
+            Debug.Log("Booth finished");
+            return;
+        }
 
         boothFinished = true;
 
@@ -20,6 +27,7 @@ public class PullBoothManager : MonoBehaviour
 
         if (index >= 0 && index < prizes.Length)
         {
+            Debug.Log("calling spawnprize");
             SpawnPrize(index);
             //Invoke("SpawnPrize",2f);
         }
@@ -46,7 +54,8 @@ public class PullBoothManager : MonoBehaviour
     void DisableOtherStrings()
     {
         //foreach (StringPull s in strings)
-        foreach (StringManualPull s in strings)
+        //foreach (StringManualPull s in strings)
+        foreach (StringManualGrab s in strings)
         {
             s.enabled = false;
         }
