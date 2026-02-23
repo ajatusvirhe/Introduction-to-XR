@@ -40,6 +40,7 @@ public class PullBoothManager : MonoBehaviour
         GameObject prize = prizes[index];
         prize.SetActive(true);
         prize.transform.position = teleportPrize.position;
+        this.GetComponent<AudioSource>().Play();            // play a pop sound effect when prize teleports
         prize.GetComponent<Rigidbody>().useGravity = true;
         if (prize.GetComponent<Collider>() != null) { 
             prize.GetComponent<Collider>().enabled = true; // enables the collider only after teleporting

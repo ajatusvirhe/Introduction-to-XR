@@ -20,6 +20,7 @@ public class CanFallDetector : MonoBehaviour
             if (distance > fallDistanceThreshold)
             {
                 hasFallen = true;
+                GetComponent<AudioSource>().Play(); // play can falling sound
             }
         }
     }
