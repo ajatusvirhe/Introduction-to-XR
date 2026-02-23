@@ -38,7 +38,6 @@ public class LeverGrab : MonoBehaviour
         {
             if (leftGrip.action.IsPressed() || rightGrip.action.IsPressed())
             {
-                Debug.Log("Started grabbing");
                 grabbingHand = handInside;
                 handStartX = grabbingHand.position.x;
                 leverStartRotation = transform.localEulerAngles.z;
@@ -87,7 +86,6 @@ public class LeverGrab : MonoBehaviour
         {
             handInTrigger = true;
             handInside = hand.transform;
-            Debug.Log("Hand in trigger lever");
         }
     }
 
