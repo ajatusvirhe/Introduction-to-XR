@@ -58,6 +58,7 @@ public class ClawMachineController : MonoBehaviour
     public void StartDropSequence()
     {
         if (!isDropping)
+            GetComponent<AudioSource>().Play();
             StartCoroutine(DropSequence());
     }
 
