@@ -92,6 +92,9 @@ public class CustomGrab : MonoBehaviour
     {
         Rigidbody rb = obj.GetComponent<Rigidbody>();
         if (!rb) return;
+        // throwing on release before re-enabling physics
+        rb.linearVelocity = (transform.position - lastPosition) / Time.deltaTime; // uutta
+        rb.angularVelocity = Vector3.zero;
         rb.isKinematic = false;
         rb.useGravity = true;
         //Debug.Log("Released: isKinematic: " + rb.isKinematic + " | usesGravity: " + rb.useGravity);
