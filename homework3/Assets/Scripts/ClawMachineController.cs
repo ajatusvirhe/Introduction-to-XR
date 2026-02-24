@@ -37,6 +37,10 @@ public class ClawMachineController : MonoBehaviour
     {
         currentInput = input;  // store lever input (-1 to 1)
     }
+    public bool IsDropping()
+    {
+        return isDropping;
+    }
 
     void Update()
     {
@@ -95,7 +99,7 @@ public class ClawMachineController : MonoBehaviour
         // Attach prize if detected
         if (grabbedPrize != null)
         {
-            Debug.Log("Grabbed a prize!");
+            Debug.Log("Grabbed a prize! " + grabbedPrize.name);
             grabbedPrize.transform.SetParent(clawRig);
             grabbedPrize.transform.localPosition = Vector3.zero;
         }
@@ -108,7 +112,6 @@ public class ClawMachineController : MonoBehaviour
                 startPos,
                 (dropSpeed * Time.deltaTime)/2
             );
-            Debug.Log("Moved up at " + Time.time);
             yield return null;
         }
 
@@ -145,6 +148,7 @@ public class ClawMachineController : MonoBehaviour
             Collider prizecollider = grabbedPrize.GetComponent<Collider>();
             if (prizecollider != null)
             {
+                Debug.Log("found colldier in prize");
                 prizecollider.enabled = true; // enables the collider only after teleporting
                 prizecollider.providesContacts = true;
                 prizecollider.isTrigger = false;
@@ -152,6 +156,7 @@ public class ClawMachineController : MonoBehaviour
             else
             {
                 prizecollider = grabbedPrize.GetComponentInChildren<Collider>();
+                Debug.Log("found collider in prize child " + prizecollider.name);
                 prizecollider.enabled = true;
                 prizecollider.providesContacts = true;
                 prizecollider.isTrigger = false;

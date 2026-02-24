@@ -7,7 +7,7 @@ public class ClawButton : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         Hand hand = other.GetComponentInParent<Hand>();
-        if (hand != null)
+        if (hand != null && machine.IsDropping() == false) // hox huom
         {
             machine.StartDropSequence();
         }
