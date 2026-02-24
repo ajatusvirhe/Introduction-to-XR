@@ -4,7 +4,10 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/fairgrounds_minigames_hw3.unity
+    guid: ec4578b669d629b4ba4bd25749783f9f
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 410119f3495b6ab40bfd38db95fcec87, type: 2}
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 289c1b55c9541489481df5cc06664110, type: 3}

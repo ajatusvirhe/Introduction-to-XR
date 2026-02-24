@@ -99,7 +99,6 @@ public class ClawMachineController : MonoBehaviour
         // Attach prize if detected
         if (grabbedPrize != null)
         {
-            Debug.Log("Grabbed a prize! " + grabbedPrize.name);
             grabbedPrize.transform.SetParent(clawRig);
             grabbedPrize.transform.localPosition = Vector3.zero;
         }
@@ -126,12 +125,10 @@ public class ClawMachineController : MonoBehaviour
             );
             yield return null;
         }
-        Debug.Log("Moved to drop point at " + Time.time);
 
         // Release prize
         if (grabbedPrize != null)
         {
-            Debug.Log("Releasing prize at " + Time.time);
             grabbedPrize.transform.SetParent(null);
             while (Vector3.Distance(grabbedPrize.transform.position, teleportTowards.position) > 0.01f)
             {
@@ -148,17 +145,15 @@ public class ClawMachineController : MonoBehaviour
             Collider prizecollider = grabbedPrize.GetComponent<Collider>();
             if (prizecollider != null)
             {
-                Debug.Log("found colldier in prize");
                 prizecollider.enabled = true; // enables the collider only after teleporting
-                prizecollider.providesContacts = true;
+                //prizecollider.providesContacts = true;
                 prizecollider.isTrigger = false;
             }
             else
             {
                 prizecollider = grabbedPrize.GetComponentInChildren<Collider>();
-                Debug.Log("found collider in prize child " + prizecollider.name);
                 prizecollider.enabled = true;
-                prizecollider.providesContacts = true;
+                //prizecollider.providesContacts = true;
                 prizecollider.isTrigger = false;
             }
             grabbedPrize = null;
